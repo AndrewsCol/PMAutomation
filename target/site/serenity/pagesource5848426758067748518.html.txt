@@ -1,0 +1,2469 @@
+<html lang="en"><head><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><meta charset="utf-8"><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="expires" content="0"><meta http-equiv="pragma" content="no-cache"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,shrink-to-fit=no"><title>PM - Accounts list</title><style>.loading{display:inline-block;width:30px;height:30px;border:2px solid rgba(100,100,100,.2);border-radius:50%;border-top-color:rgba(100,100,100,.7);animation:spin 1s ease-in-out infinite;-webkit-animation:spin 1s ease-in-out infinite;left:calc(50% - 15px);top:calc(50% - 15px);position:fixed;z-index:1}@keyframes spin{to{-webkit-transform:rotate(360deg)}}@-webkit-keyframes spin{to{-webkit-transform:rotate(360deg)}}</style><script type="text/javascript" async="" src="https://widget.intercom.io/widget/h5dqn4as"></script><script>!function(){var t=window,e=t.Intercom;if("function"==typeof e)e("reattach_activator"),e("update",t.intercomSettings);else{var n=document,a=function(){a.c(arguments)};a.q=[],a.c=function(t){a.q.push(t)},t.Intercom=a;var c=function(){var t=n.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://widget.intercom.io/widget/h5dqn4as";var e=n.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)};t.attachEvent?t.attachEvent("onload",c):t.addEventListener("load",c,!1)}}()</script><link rel="icon" href="/favicon.ico"><script defer="defer" src="/assets/js/3f30348fcca1443e5a50.runtime.js"></script><script defer="defer" src="/assets/js/3f30348fcca1443e5a50.main.js"></script><link href="/assets/css/main.3d02bc6e865fd776ca4c.css" rel="stylesheet"><style data-emotion=""></style><style data-jss="" data-meta="MuiIcon">
+.MuiIcon-root {
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  user-select: none;
+}
+.MuiIcon-colorPrimary {
+  color: #3f51b5;
+}
+.MuiIcon-colorSecondary {
+  color: #f50057;
+}
+.MuiIcon-colorAction {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiIcon-colorError {
+  color: #f44336;
+}
+.MuiIcon-colorDisabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+.MuiIcon-fontSizeInherit {
+  font-size: inherit;
+}
+.MuiIcon-fontSizeSmall {
+  font-size: 1.25rem;
+}
+.MuiIcon-fontSizeLarge {
+  font-size: 2.25rem;
+}
+</style><style data-jss="" data-meta="MuiTouchRipple">
+.MuiTouchRipple-root {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  position: absolute;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.MuiTouchRipple-ripple {
+  opacity: 0;
+  position: absolute;
+}
+.MuiTouchRipple-rippleVisible {
+  opacity: 0.3;
+  animation: MuiTouchRipple-keyframes-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+.MuiTouchRipple-ripplePulsate {
+  animation-duration: 200ms;
+}
+.MuiTouchRipple-child {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.MuiTouchRipple-childLeaving {
+  opacity: 0;
+  animation: MuiTouchRipple-keyframes-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MuiTouchRipple-childPulsate {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: MuiTouchRipple-keyframes-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-enter {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style><style data-jss="" data-meta="MuiButtonBase">
+.MuiButtonBase-root {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root.Mui-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+@media print {
+  .MuiButtonBase-root {
+    -webkit-print-color-adjust: exact;
+  }
+}
+</style><style data-jss="" data-meta="MuiGrid">
+.MuiGrid-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.MuiGrid-item {
+  margin: 0;
+  box-sizing: border-box;
+}
+.MuiGrid-zeroMinWidth {
+  min-width: 0;
+}
+.MuiGrid-direction-xs-column {
+  flex-direction: column;
+}
+.MuiGrid-direction-xs-column-reverse {
+  flex-direction: column-reverse;
+}
+.MuiGrid-direction-xs-row-reverse {
+  flex-direction: row-reverse;
+}
+.MuiGrid-wrap-xs-nowrap {
+  flex-wrap: nowrap;
+}
+.MuiGrid-wrap-xs-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+.MuiGrid-align-items-xs-center {
+  align-items: center;
+}
+.MuiGrid-align-items-xs-flex-start {
+  align-items: flex-start;
+}
+.MuiGrid-align-items-xs-flex-end {
+  align-items: flex-end;
+}
+.MuiGrid-align-items-xs-baseline {
+  align-items: baseline;
+}
+.MuiGrid-align-content-xs-center {
+  align-content: center;
+}
+.MuiGrid-align-content-xs-flex-start {
+  align-content: flex-start;
+}
+.MuiGrid-align-content-xs-flex-end {
+  align-content: flex-end;
+}
+.MuiGrid-align-content-xs-space-between {
+  align-content: space-between;
+}
+.MuiGrid-align-content-xs-space-around {
+  align-content: space-around;
+}
+.MuiGrid-justify-content-xs-center {
+  justify-content: center;
+}
+.MuiGrid-justify-content-xs-flex-end {
+  justify-content: flex-end;
+}
+.MuiGrid-justify-content-xs-space-between {
+  justify-content: space-between;
+}
+.MuiGrid-justify-content-xs-space-around {
+  justify-content: space-around;
+}
+.MuiGrid-justify-content-xs-space-evenly {
+  justify-content: space-evenly;
+}
+.MuiGrid-spacing-xs-1 {
+  width: calc(100% + 8px);
+  margin: -4px;
+}
+.MuiGrid-spacing-xs-1 > .MuiGrid-item {
+  padding: 4px;
+}
+.MuiGrid-spacing-xs-2 {
+  width: calc(100% + 16px);
+  margin: -8px;
+}
+.MuiGrid-spacing-xs-2 > .MuiGrid-item {
+  padding: 8px;
+}
+.MuiGrid-spacing-xs-3 {
+  width: calc(100% + 24px);
+  margin: -12px;
+}
+.MuiGrid-spacing-xs-3 > .MuiGrid-item {
+  padding: 12px;
+}
+.MuiGrid-spacing-xs-4 {
+  width: calc(100% + 32px);
+  margin: -16px;
+}
+.MuiGrid-spacing-xs-4 > .MuiGrid-item {
+  padding: 16px;
+}
+.MuiGrid-spacing-xs-5 {
+  width: calc(100% + 40px);
+  margin: -20px;
+}
+.MuiGrid-spacing-xs-5 > .MuiGrid-item {
+  padding: 20px;
+}
+.MuiGrid-spacing-xs-6 {
+  width: calc(100% + 48px);
+  margin: -24px;
+}
+.MuiGrid-spacing-xs-6 > .MuiGrid-item {
+  padding: 24px;
+}
+.MuiGrid-spacing-xs-7 {
+  width: calc(100% + 56px);
+  margin: -28px;
+}
+.MuiGrid-spacing-xs-7 > .MuiGrid-item {
+  padding: 28px;
+}
+.MuiGrid-spacing-xs-8 {
+  width: calc(100% + 64px);
+  margin: -32px;
+}
+.MuiGrid-spacing-xs-8 > .MuiGrid-item {
+  padding: 32px;
+}
+.MuiGrid-spacing-xs-9 {
+  width: calc(100% + 72px);
+  margin: -36px;
+}
+.MuiGrid-spacing-xs-9 > .MuiGrid-item {
+  padding: 36px;
+}
+.MuiGrid-spacing-xs-10 {
+  width: calc(100% + 80px);
+  margin: -40px;
+}
+.MuiGrid-spacing-xs-10 > .MuiGrid-item {
+  padding: 40px;
+}
+.MuiGrid-grid-xs-auto {
+  flex-grow: 0;
+  max-width: none;
+  flex-basis: auto;
+}
+.MuiGrid-grid-xs-true {
+  flex-grow: 1;
+  max-width: 100%;
+  flex-basis: 0;
+}
+.MuiGrid-grid-xs-1 {
+  flex-grow: 0;
+  max-width: 8.333333%;
+  flex-basis: 8.333333%;
+}
+.MuiGrid-grid-xs-2 {
+  flex-grow: 0;
+  max-width: 16.666667%;
+  flex-basis: 16.666667%;
+}
+.MuiGrid-grid-xs-3 {
+  flex-grow: 0;
+  max-width: 25%;
+  flex-basis: 25%;
+}
+.MuiGrid-grid-xs-4 {
+  flex-grow: 0;
+  max-width: 33.333333%;
+  flex-basis: 33.333333%;
+}
+.MuiGrid-grid-xs-5 {
+  flex-grow: 0;
+  max-width: 41.666667%;
+  flex-basis: 41.666667%;
+}
+.MuiGrid-grid-xs-6 {
+  flex-grow: 0;
+  max-width: 50%;
+  flex-basis: 50%;
+}
+.MuiGrid-grid-xs-7 {
+  flex-grow: 0;
+  max-width: 58.333333%;
+  flex-basis: 58.333333%;
+}
+.MuiGrid-grid-xs-8 {
+  flex-grow: 0;
+  max-width: 66.666667%;
+  flex-basis: 66.666667%;
+}
+.MuiGrid-grid-xs-9 {
+  flex-grow: 0;
+  max-width: 75%;
+  flex-basis: 75%;
+}
+.MuiGrid-grid-xs-10 {
+  flex-grow: 0;
+  max-width: 83.333333%;
+  flex-basis: 83.333333%;
+}
+.MuiGrid-grid-xs-11 {
+  flex-grow: 0;
+  max-width: 91.666667%;
+  flex-basis: 91.666667%;
+}
+.MuiGrid-grid-xs-12 {
+  flex-grow: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+@media (min-width:600px) {
+  .MuiGrid-grid-sm-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-sm-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-sm-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-sm-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-sm-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-sm-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-sm-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-sm-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-sm-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-sm-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-sm-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-sm-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-sm-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-sm-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:960px) {
+  .MuiGrid-grid-md-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-md-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-md-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-md-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-md-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-md-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-md-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-md-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-md-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-md-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-md-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-md-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-md-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-md-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1280px) {
+  .MuiGrid-grid-lg-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-lg-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-lg-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-lg-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-lg-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-lg-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-lg-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-lg-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-lg-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-lg-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-lg-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-lg-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-lg-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-lg-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1920px) {
+  .MuiGrid-grid-xl-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-xl-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-xl-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-xl-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-xl-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-xl-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-xl-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-xl-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-xl-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-xl-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-xl-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-xl-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-xl-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-xl-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+</style><style data-jss="" data-meta="MuiTypography">
+.MuiTypography-root {
+  margin: 0;
+}
+.MuiTypography-body2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+.MuiTypography-body1 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-caption {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+}
+.MuiTypography-button {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.MuiTypography-h1 {
+  font-size: 6rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.167;
+  letter-spacing: -0.01562em;
+}
+.MuiTypography-h2 {
+  font-size: 3.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+}
+.MuiTypography-h3 {
+  font-size: 3rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.167;
+  letter-spacing: 0em;
+}
+.MuiTypography-h4 {
+  font-size: 2.125rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+}
+.MuiTypography-h5 {
+  font-size: 1.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.334;
+  letter-spacing: 0em;
+}
+.MuiTypography-h6 {
+  font-size: 1.25rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+.MuiTypography-subtitle1 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-subtitle2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+}
+.MuiTypography-overline {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 2.66;
+  letter-spacing: 0.08333em;
+  text-transform: uppercase;
+}
+.MuiTypography-srOnly {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+.MuiTypography-alignLeft {
+  text-align: left;
+}
+.MuiTypography-alignCenter {
+  text-align: center;
+}
+.MuiTypography-alignRight {
+  text-align: right;
+}
+.MuiTypography-alignJustify {
+  text-align: justify;
+}
+.MuiTypography-noWrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.MuiTypography-gutterBottom {
+  margin-bottom: 0.35em;
+}
+.MuiTypography-paragraph {
+  margin-bottom: 16px;
+}
+.MuiTypography-colorInherit {
+  color: inherit;
+}
+.MuiTypography-colorPrimary {
+  color: #3f51b5;
+}
+.MuiTypography-colorSecondary {
+  color: #f50057;
+}
+.MuiTypography-colorTextPrimary {
+  color: rgba(0, 0, 0, 0.87);
+}
+.MuiTypography-colorTextSecondary {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTypography-colorError {
+  color: #f44336;
+}
+.MuiTypography-displayInline {
+  display: inline;
+}
+.MuiTypography-displayBlock {
+  display: block;
+}
+</style><style data-jss="" data-meta="MuiFormControlLabel">
+.MuiFormControlLabel-root {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  margin-left: -11px;
+  margin-right: 16px;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiFormControlLabel-root.Mui-disabled {
+  cursor: default;
+}
+.MuiFormControlLabel-labelPlacementStart {
+  margin-left: 16px;
+  margin-right: -11px;
+  flex-direction: row-reverse;
+}
+.MuiFormControlLabel-labelPlacementTop {
+  margin-left: 16px;
+  flex-direction: column-reverse;
+}
+.MuiFormControlLabel-labelPlacementBottom {
+  margin-left: 16px;
+  flex-direction: column;
+}
+.MuiFormControlLabel-label.Mui-disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+</style><style data-jss="" data-meta="MuiIconButton">
+.MuiIconButton-root {
+  flex: 0 0 auto;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 12px;
+  overflow: visible;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;
+}
+.MuiIconButton-root:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.MuiIconButton-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  background-color: transparent;
+}
+@media (hover: none) {
+  .MuiIconButton-root:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-edgeStart {
+  margin-left: -12px;
+}
+.MuiIconButton-sizeSmall.MuiIconButton-edgeStart {
+  margin-left: -3px;
+}
+.MuiIconButton-edgeEnd {
+  margin-right: -12px;
+}
+.MuiIconButton-sizeSmall.MuiIconButton-edgeEnd {
+  margin-right: -3px;
+}
+.MuiIconButton-colorInherit {
+  color: inherit;
+}
+.MuiIconButton-colorPrimary {
+  color: #3f51b5;
+}
+.MuiIconButton-colorPrimary:hover {
+  background-color: rgba(63, 81, 181, 0.04);
+}
+@media (hover: none) {
+  .MuiIconButton-colorPrimary:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-colorSecondary {
+  color: #f50057;
+}
+.MuiIconButton-colorSecondary:hover {
+  background-color: rgba(245, 0, 87, 0.04);
+}
+@media (hover: none) {
+  .MuiIconButton-colorSecondary:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-sizeSmall {
+  padding: 3px;
+  font-size: 1.125rem;
+}
+.MuiIconButton-label {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+</style><style data-jss="" data-meta="PrivateSwitchBase">
+.jss1 {
+  padding: 9px;
+}
+.jss4 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+}
+</style><style data-jss="" data-meta="MuiSvgIcon">
+.MuiSvgIcon-root {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+.MuiSvgIcon-colorPrimary {
+  color: #3f51b5;
+}
+.MuiSvgIcon-colorSecondary {
+  color: #f50057;
+}
+.MuiSvgIcon-colorAction {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiSvgIcon-colorError {
+  color: #f44336;
+}
+.MuiSvgIcon-colorDisabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+.MuiSvgIcon-fontSizeInherit {
+  font-size: inherit;
+}
+.MuiSvgIcon-fontSizeSmall {
+  font-size: 1.25rem;
+}
+.MuiSvgIcon-fontSizeLarge {
+  font-size: 2.1875rem;
+}
+</style><style data-jss="" data-meta="MuiCheckbox">
+.MuiCheckbox-root {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiCheckbox-colorPrimary.Mui-checked {
+  color: #3f51b5;
+}
+.MuiCheckbox-colorPrimary.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+.MuiCheckbox-colorPrimary.Mui-checked:hover {
+  background-color: rgba(63, 81, 181, 0.04);
+}
+@media (hover: none) {
+  .MuiCheckbox-colorPrimary.Mui-checked:hover {
+    background-color: transparent;
+  }
+}
+.MuiCheckbox-colorSecondary.Mui-checked {
+  color: #f50057;
+}
+.MuiCheckbox-colorSecondary.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+.MuiCheckbox-colorSecondary.Mui-checked:hover {
+  background-color: rgba(245, 0, 87, 0.04);
+}
+@media (hover: none) {
+  .MuiCheckbox-colorSecondary.Mui-checked:hover {
+    background-color: transparent;
+  }
+}
+</style><style data-jss="" data-meta="MuiTableHead">
+.MuiTableHead-root {
+  display: table-header-group;
+}
+</style><style data-jss="" data-meta="MuiTableRow">
+.MuiTableRow-root {
+  color: inherit;
+  display: table-row;
+  outline: 0;
+  vertical-align: middle;
+}
+.MuiTableRow-root.MuiTableRow-hover:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.MuiTableRow-root.Mui-selected, .MuiTableRow-root.Mui-selected:hover {
+  background-color: rgba(245, 0, 87, 0.08);
+}
+</style><style data-jss="" data-meta="MuiTableCell">
+.MuiTableCell-root {
+  display: table-cell;
+  padding: 16px;
+  font-size: 0.875rem;
+  text-align: left;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  border-bottom: 1px solid
+    rgba(224, 224, 224, 1);
+  letter-spacing: 0.01071em;
+  vertical-align: inherit;
+}
+.MuiTableCell-head {
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+.MuiTableCell-body {
+  color: rgba(0, 0, 0, 0.87);
+}
+.MuiTableCell-footer {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.75rem;
+  line-height: 1.3125rem;
+}
+.MuiTableCell-sizeSmall {
+  padding: 6px 24px 6px 16px;
+}
+.MuiTableCell-sizeSmall:last-child {
+  padding-right: 16px;
+}
+.MuiTableCell-sizeSmall.MuiTableCell-paddingCheckbox {
+  width: 24px;
+  padding: 0 12px 0 16px;
+}
+.MuiTableCell-sizeSmall.MuiTableCell-paddingCheckbox:last-child {
+  padding-left: 12px;
+  padding-right: 16px;
+}
+.MuiTableCell-sizeSmall.MuiTableCell-paddingCheckbox > * {
+  padding: 0;
+}
+.MuiTableCell-paddingCheckbox {
+  width: 48px;
+  padding: 0 0 0 4px;
+}
+.MuiTableCell-paddingCheckbox:last-child {
+  padding-left: 0;
+  padding-right: 4px;
+}
+.MuiTableCell-paddingNone {
+  padding: 0;
+}
+.MuiTableCell-paddingNone:last-child {
+  padding: 0;
+}
+.MuiTableCell-alignLeft {
+  text-align: left;
+}
+.MuiTableCell-alignCenter {
+  text-align: center;
+}
+.MuiTableCell-alignRight {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+.MuiTableCell-alignJustify {
+  text-align: justify;
+}
+.MuiTableCell-stickyHeader {
+  top: 0;
+  left: 0;
+  z-index: 2;
+  position: sticky;
+  background-color: #fafafa;
+}
+</style><style data-jss="" data-meta="MuiTableSortLabel">
+.MuiTableSortLabel-root {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: inherit;
+  justify-content: flex-start;
+}
+.MuiTableSortLabel-root:focus {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTableSortLabel-root:hover {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTableSortLabel-root.MuiTableSortLabel-active {
+  color: rgba(0, 0, 0, 0.87);
+}
+.MuiTableSortLabel-root.MuiTableSortLabel-active.MuiTableSortLabel-root.MuiTableSortLabel-active .MuiTableSortLabel-icon {
+  color: rgba(0, 0, 0, 0.54);
+  opacity: 1;
+}
+.MuiTableSortLabel-root:hover .MuiTableSortLabel-icon {
+  opacity: 0.5;
+}
+.MuiTableSortLabel-icon {
+  opacity: 0;
+  font-size: 18px;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  margin-left: 4px;
+  user-select: none;
+  margin-right: 4px;
+}
+.MuiTableSortLabel-iconDirectionDesc {
+  transform: rotate(0deg);
+}
+.MuiTableSortLabel-iconDirectionAsc {
+  transform: rotate(180deg);
+}
+</style><style data-jss="" data-meta="MuiTableContainer">
+.MuiTableContainer-root {
+  width: 100%;
+  overflow-x: auto;
+}
+</style><style data-jss="" data-meta="MuiTable">
+.MuiTable-root {
+  width: 100%;
+  display: table;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.MuiTable-root caption {
+  color: rgba(0, 0, 0, 0.54);
+  padding: 16px;
+  font-size: 0.875rem;
+  text-align: left;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  caption-side: bottom;
+  letter-spacing: 0.01071em;
+}
+.MuiTable-stickyHeader {
+  border-collapse: separate;
+}
+</style><style data-jss="" data-meta="MuiTableBody">
+.MuiTableBody-root {
+  display: table-row-group;
+}
+</style><style data-jss="" data-meta="MuiPaginationItem">
+.MuiPaginationItem-root {
+  color: rgba(0, 0, 0, 0.87);
+  height: 32px;
+  margin: 0 3px;
+  padding: 0 6px;
+  font-size: 0.875rem;
+  min-width: 32px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  border-radius: 16px;
+  letter-spacing: 0.01071em;
+}
+.MuiPaginationItem-page {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.MuiPaginationItem-page:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.MuiPaginationItem-page.Mui-focusVisible {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.MuiPaginationItem-page.Mui-selected {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.MuiPaginationItem-page.Mui-disabled {
+  opacity: 0.38;
+}
+.MuiPaginationItem-page.Mui-selected:hover, .MuiPaginationItem-page.Mui-selected.Mui-focusVisible {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.MuiPaginationItem-page.Mui-selected.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+@media (hover: none) {
+  .MuiPaginationItem-page.Mui-selected:hover, .MuiPaginationItem-page.Mui-selected.Mui-focusVisible {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+}
+@media (hover: none) {
+  .MuiPaginationItem-page:hover {
+    background-color: transparent;
+  }
+}
+.MuiPaginationItem-sizeSmall {
+  height: 26px;
+  margin: 0 1px;
+  padding: 0 4px;
+  min-width: 26px;
+  border-radius: 13px;
+}
+.MuiPaginationItem-sizeSmall .MuiPaginationItem-icon {
+  font-size: 1.125rem;
+}
+.MuiPaginationItem-sizeLarge {
+  height: 40px;
+  padding: 0 10px;
+  font-size: 0.9375rem;
+  min-width: 40px;
+  border-radius: 20px;
+}
+.MuiPaginationItem-sizeLarge .MuiPaginationItem-icon {
+  font-size: 1.375rem;
+}
+.MuiPaginationItem-textPrimary.Mui-selected {
+  color: #fff;
+  background-color: #3f51b5;
+}
+.MuiPaginationItem-textPrimary.Mui-selected:hover, .MuiPaginationItem-textPrimary.Mui-selected.Mui-focusVisible {
+  background-color: #303f9f;
+}
+.MuiPaginationItem-textPrimary.Mui-selected.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiPaginationItem-textPrimary.Mui-selected:hover, .MuiPaginationItem-textPrimary.Mui-selected.Mui-focusVisible {
+    background-color: #3f51b5;
+  }
+}
+.MuiPaginationItem-textSecondary.Mui-selected {
+  color: #fff;
+  background-color: #f50057;
+}
+.MuiPaginationItem-textSecondary.Mui-selected:hover, .MuiPaginationItem-textSecondary.Mui-selected.Mui-focusVisible {
+  background-color: #c51162;
+}
+.MuiPaginationItem-textSecondary.Mui-selected.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiPaginationItem-textSecondary.Mui-selected:hover, .MuiPaginationItem-textSecondary.Mui-selected.Mui-focusVisible {
+    background-color: #f50057;
+  }
+}
+.MuiPaginationItem-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+}
+.MuiPaginationItem-outlined.Mui-selected.Mui-disabled {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiPaginationItem-outlinedPrimary.Mui-selected {
+  color: #3f51b5;
+  border: 1px solid rgba(63, 81, 181, 0.5);
+  background-color: rgba(63, 81, 181, 0.12);
+}
+.MuiPaginationItem-outlinedPrimary.Mui-selected:hover, .MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-focusVisible {
+  background-color: rgba(63, 81, 181, 0.16);
+}
+.MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiPaginationItem-outlinedPrimary.Mui-selected:hover, .MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-focusVisible {
+    background-color: transparent;
+  }
+}
+.MuiPaginationItem-outlinedSecondary.Mui-selected {
+  color: #f50057;
+  border: 1px solid rgba(245, 0, 87, 0.5);
+  background-color: rgba(245, 0, 87, 0.12);
+}
+.MuiPaginationItem-outlinedSecondary.Mui-selected:hover, .MuiPaginationItem-outlinedSecondary.Mui-selected.Mui-focusVisible {
+  background-color: rgba(245, 0, 87, 0.16);
+}
+.MuiPaginationItem-outlinedSecondary.Mui-selected.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiPaginationItem-outlinedSecondary.Mui-selected:hover, .MuiPaginationItem-outlinedSecondary.Mui-selected.Mui-focusVisible {
+    background-color: transparent;
+  }
+}
+.MuiPaginationItem-rounded {
+  border-radius: 4px;
+}
+.MuiPaginationItem-ellipsis {
+  height: auto;
+}
+.MuiPaginationItem-ellipsis.Mui-disabled {
+  opacity: 0.38;
+}
+.MuiPaginationItem-icon {
+  margin: 0 -8px;
+  font-size: 1.25rem;
+}
+</style><style data-jss="" data-meta="MuiPagination">
+.MuiPagination-ul {
+  margin: 0;
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+}
+</style><link rel="stylesheet" type="text/css" href="/assets/css/4722.d7cc536fcbab5985ebdf.css"><link rel="stylesheet" type="text/css" href="/assets/css/1721.03681c1f1b80c453dcc2.css"><link rel="stylesheet" type="text/css" href="/assets/css/351.a4fd36586f060051aeef.css"><style type="text/css">.table-view-list-container {
+  width: 100%;
+  position: relative; }
+  .table-view-list-container .item-list-selector-container {
+    position: absolute;
+    top: 20%;
+    right: -26px;
+    display: none; }
+  .table-view-list-container .item-list-selected {
+    display: block !important; }
+
+.table-view-list-container:hover .item-list-selector-container {
+  display: block; }
+</style><style type="text/css">/*REVIEW*/
+.icon-button {
+  font-size: 25px !important;
+  color: #000000 !important; }
+
+.icon-button-disabled {
+  color: grey !important; }
+
+.btn {
+  outline: none !important;
+  min-width: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 5px; }
+
+.btn-block {
+  width: 100% !important; }
+
+.btn-disabled {
+  background-color: #e4e4e4 !important;
+  color: #c6c6c6 !important;
+  cursor: auto !important; }
+  .btn-disabled:hover {
+    background-color: #e4e4e4 !important;
+    color: #c6c6c6 !important; }
+
+.btn-link {
+  text-decoration: none;
+  color: #57595b;
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+  .btn-link:hover {
+    text-decoration: underline;
+    color: #000; }
+  .btn-link:focus {
+    outline: none; }
+
+.btn-cancel {
+  text-decoration: none;
+  color: #57595b;
+  border: none;
+  background-color: transparent;
+  border-radius: 3px; }
+  .btn-cancel:hover {
+    color: #000;
+    background-color: #e4e4e4; }
+
+.btn-blue {
+  border-radius: 3px;
+  border: none;
+  background-color: #03a9f4;
+  color: #fff; }
+  .btn-blue:hover {
+    background-color: #0098dc; }
+
+.btn-dark-blue {
+  border-radius: 3px;
+  border: none;
+  background-color: #283c54;
+  color: #fff; }
+  .btn-dark-blue:hover {
+    background-color: #4b6f9a; }
+
+.btn-green {
+  border-radius: 3px;
+  border: none;
+  background-color: #43bf60;
+  color: #fff; }
+  .btn-green:hover {
+    background-color: #66bb6a; }
+
+.btn-red {
+  border-radius: 3px;
+  border: none;
+  background-color: #e40000;
+  color: #fff; }
+  .btn-red:hover {
+    background-color: #bd0202; }
+
+.btn-black {
+  border-radius: 3px;
+  border: none;
+  background-color: #313131;
+  color: #fff; }
+  .btn-black:hover {
+    background-color: #5c5b5b; }
+
+.btn-gray {
+  border-radius: 3px;
+  border: none;
+  background-color: #e4e4e4;
+  color: #57595b; }
+  .btn-gray:hover {
+    background-color: transparent; }
+
+.btn-block {
+  width: 100%; }
+
+.btn-sm {
+  min-width: 40px !important;
+  padding: 5px 5px !important;
+  font-size: 12px !important; }
+
+.MuiIconButton-sizeSmall {
+  padding: 7px !important; }
+
+.btn-xs {
+  padding: 3px !important; }
+
+.icon-button-selected {
+  margin-left: 8px !important;
+  margin-right: 5px !important;
+  border-radius: 50% !important; }
+
+.icon-button-selected-green {
+  background-color: #43bf60 !important;
+  color: #fff !important; }
+
+.span-button {
+  text-decoration: underline;
+  color: #57595b;
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+  .span-button:hover {
+    text-decoration: underline;
+    color: #000; }
+  .span-button:focus {
+    outline: none; }
+
+.span-button-disabled {
+  color: grey !important;
+  cursor: not-allowed; }
+</style><style type="text/css">.MuiOutlinedInput-adornedEnd {
+  padding-right: 0px !important; }
+
+.MuiOutlinedInput-input {
+  padding: 12px 14px !important; }
+
+.MuiInputAdornment-positionEnd {
+  margin-left: 0px !important; }
+
+.mb-10 {
+  margin-bottom: 10px !important; }
+
+.text-bold {
+  font-weight: 700; }
+
+.toolbar {
+  margin-bottom: 20px; }
+
+.compact-toolbar {
+  margin-bottom: 0px; }
+
+#visibiliy_header {
+  padding: 25px; }
+
+#visibiliy_bottom {
+  padding-top: 25px;
+  padding-bottom: 25px; }
+
+.elements_visibility {
+  padding-top: 15px; }
+
+.visibility_label {
+  margin-left: 50px; }
+</style><style type="text/css">/*REVIEW*/
+.cursor-pointer {
+  cursor: pointer; }
+
+.cursor-auto {
+  cursor: auto !important; }
+
+.mb-10 {
+  margin-bottom: 10px !important; }
+
+.mb-20 {
+  margin-bottom: 20px !important; }
+
+.MuiPaginationItem-textSecondary {
+  background-color: #F0f0F0 !important; }
+
+.MuiPaginationItem-textSecondary.Mui-selected {
+  background-color: #66bb6a !important; }
+
+.MuiPaginationItem-root {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important; }
+
+.footer-lite {
+  padding: 50px 5px 10px 5px !important;
+  border-bottom: 0px solid black !important; }
+
+.clickable {
+  cursor: pointer; }
+
+.clickable:hover {
+  text-decoration: underline;
+  color: #66bb6a; }
+
+.page-circle {
+  border-radius: 40px;
+  background-color: #ededed;
+  color: #767676;
+  font-size: 13px;
+  padding: 2px 9px;
+  margin: 5px 5px;
+  cursor: pointer;
+  white-space: nowrap; }
+
+.page-circle-active {
+  background-color: #66bb6a;
+  color: white; }
+
+.page-action {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 15px;
+  padding: 5px 5px 5px 5px; }
+
+.prev-disabled {
+  color: #ddd !important;
+  cursor: auto !important; }
+
+.pagination-controls-t {
+  justify-content: flex-start; }
+
+@media (max-width: 1280px) {
+  .pagination-controls-t {
+    justify-content: center !important;
+    margin-bottom: 20px !important; } }
+
+.pagination-container {
+  padding-top: 10px; }
+
+.btn-link {
+  text-decoration: underline;
+  color: #57595b;
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+  .btn-link:hover {
+    text-decoration: underline;
+    color: #000; }
+  .btn-link:focus {
+    outline: none; }
+
+.onlyLine {
+  margin: 0;
+  display: flex;
+  padding: 0;
+  flex-wrap: nowrap;
+  list-style: none;
+  align-items: center;
+  z-index: 10; }
+</style><style type="text/css">.table-view-container {
+  width: 100%;
+  height: 100%;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */ }
+  .table-view-container ::-webkit-scrollbar {
+    width: 8px; }
+  .table-view-container ::-webkit-scrollbar-track {
+    background: #f1f1f1; }
+  .table-view-container ::-webkit-scrollbar-thumb {
+    background: #ddd; }
+  .table-view-container ::-webkit-scrollbar-thumb:hover {
+    background: #888; }
+
+.table-toolbar-container {
+  height: 40px;
+  margin-bottom: 5px; }
+</style><style type="text/css">/*REVIEW*/
+.MuiCircularProgress-colorPrimary {
+  color: #66bb6a !important; }
+
+.loading-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 999; }
+  .loading-container .loading-spinner {
+    height: 30px;
+    width: 30px;
+    position: absolute !important;
+    top: calc(50% - 15px) !important;
+    left: calc(50% - 15px) !important; }
+  .loading-container.loading-overlay {
+    background-color: rgba(40, 60, 84, 0.3); }
+</style><style type="text/css">.video-player {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.video-player-retry-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 10000;
+  text-align: center; }
+
+.video-player-retry-message {
+  text-align: center;
+  color: white; }
+
+.video-player-btn {
+  margin: 8px 5px 5px 5px;
+  cursor: pointer; }
+  .video-player-btn .btn-retry {
+    color: white; }
+
+.video-js .vjs-button.vjs-icon-download {
+  cursor: pointer;
+  display: block;
+  font-family: VideoJs; }
+  .video-js .vjs-button.vjs-icon-download:before {
+    display: block;
+    position: relative;
+    top: 4px;
+    content: '\f101';
+    transform: rotate(90deg);
+    font-size: 1.5em; }
+  .video-js .vjs-button.vjs-icon-download:after {
+    display: block;
+    content: ' ';
+    width: 4px;
+    height: 5px;
+    background-color: white;
+    position: relative;
+    top: -11px;
+    left: calc(50% - 2px); }
+
+.video-js .vjs-button.vjs-icon-stop {
+  cursor: pointer;
+  display: block;
+  font-family: VideoJs; }
+  .video-js .vjs-button.vjs-icon-stop:before {
+    display: block;
+    position: relative;
+    content: '\f10a';
+    transform: rotate(90deg);
+    width: 1.2em;
+    height: 1.2em;
+    background-color: white; }
+
+.video-js .vjs-VR-control.vjs-control.vjs-button.enable:before {
+  font-size: 1.4em !important; }
+
+.video-js .vjs-button.vjs-icon-rotate {
+  cursor: pointer;
+  display: block;
+  background: url("data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 enable-background%3D%22new 0 0 24 24%22 height%3D%2224px%22 viewBox%3D%220 0 24 24%22 width%3D%2224px%22 fill%3D%22%23FFFFFF%22%3E%3Cg%3E%3Crect fill%3D%22none%22 height%3D%2224%22 width%3D%2224%22%2F%3E%3C%2Fg%3E%3Cg%3E%3Cg%3E%3Cpath d%3D%22M9%2C12c0%2C1.66%2C1.34%2C3%2C3%2C3s3-1.34%2C3-3s-1.34-3-3-3S9%2C10.34%2C9%2C12z M13%2C12c0%2C0.55-0.45%2C1-1%2C1s-1-0.45-1-1s0.45-1%2C1-1 S13%2C11.45%2C13%2C12z%22%2F%3E%3Cpath d%3D%22M8%2C10V8H5.09C6.47%2C5.61%2C9.05%2C4%2C12%2C4c3.72%2C0%2C6.85%2C2.56%2C7.74%2C6h2.06c-0.93-4.56-4.96-8-9.8-8C8.73%2C2%2C5.82%2C3.58%2C4%2C6.01V4H2v6 H8z%22%2F%3E%3Cpath d%3D%22M16%2C14v2h2.91c-1.38%2C2.39-3.96%2C4-6.91%2C4c-3.72%2C0-6.85-2.56-7.74-6H2.2c0.93%2C4.56%2C4.96%2C8%2C9.8%2C8c3.27%2C0%2C6.18-1.58%2C8-4.01V20 h2v-6H16z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px; }
+</style><style type="text/css">/**
+ * Created by yanwsh on 4/3/16.
+ */
+.IIV::-webkit-media-controls-play-button,
+.IIV::-webkit-media-controls-start-playback-button {
+  opacity: 0;
+  pointer-events: none;
+  width: 5px; }
+
+@font-face {
+  font-family: "VideoJS-Panorama";
+  src: url("data:application/font-woff;base64,d09GRgABAAAAAAU8AAsAAAAABPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABCAAAAGAAAABgDxIFgGNtYXAAAAFoAAAAVAAAAFQXVtKIZ2FzcAAAAbwAAAAIAAAACAAAABBnbHlmAAABxAAAASwAAAEsI6gHfmhlYWQAAALwAAAANgAAADYKxyD1aGhlYQAAAygAAAAkAAAAJAexA8dobXR4AAADTAAAABgAAAAYDgAAUWxvY2EAAANkAAAADgAAAA4AvgCMbWF4cAAAA3QAAAAgAAAAIAAKAD9uYW1lAAADlAAAAYYAAAGGmUoJ+3Bvc3QAAAUcAAAAIAAAACAAAwAAAAMDVQGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA6QEDwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADgAAAAKAAgAAgACAAEAIOkB//3//wAAAAAAIOkA//3//wAB/+MXBAADAAEAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAwARAHID7wL8ACIALwA8AAABJiQMAQcOARQWFx4DMzcwNjMyFjEXMj4CNz4CJicxASImNTQ2MzIWFRQGIyEiJjU0NjMyFhUUBiMD7wv+zv6X/tAICAkJCAM6XntFKi47PzkjRHpcOAMHCgEICv0FPVZWPT1WVzwCEj1WVj09VlY9AvwKCQEKCAnD5sMIAwUDAnFrgloCBAQDB8LmxAr+Q1Y9PVZWPT1WVj09VlY9PVYAAAAAAQBA/8AC+gPAAA0AAAU+AS4BBxUJARU2HgECAvorJjirqP6AAYDJ40ZPQE22mmUE/gGAAYD4BZzs/u0AAQAAAAAAADT5+xNfDzz1AAsEAAAAAADT3O48AAAAANPc7jwAAP/AA+8DwAAAAAgAAgAAAAAAAAABAAADwP/AAAAEAAAAAAAD7wABAAAAAAAAAAAAAAAAAAAABgQAAAAAAAAAAAAAAAIAAAAEAAARBAAAQAAAAAAACgAUAB4AeACWAAAAAQAAAAYAPQADAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA4ArgABAAAAAAABAAcAAAABAAAAAAACAAcAYAABAAAAAAADAAcANgABAAAAAAAEAAcAdQABAAAAAAAFAAsAFQABAAAAAAAGAAcASwABAAAAAAAKABoAigADAAEECQABAA4ABwADAAEECQACAA4AZwADAAEECQADAA4APQADAAEECQAEAA4AfAADAAEECQAFABYAIAADAAEECQAGAA4AUgADAAEECQAKADQApGljb21vb24AaQBjAG8AbQBvAG8AblZlcnNpb24gMS4wAFYAZQByAHMAaQBvAG4AIAAxAC4AMGljb21vb24AaQBjAG8AbQBvAG8Abmljb21vb24AaQBjAG8AbQBvAG8AblJlZ3VsYXIAUgBlAGcAdQBsAGEAcmljb21vb24AaQBjAG8AbQBvAG8AbkZvbnQgZ2VuZXJhdGVkIGJ5IEljb01vb24uAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=") format("woff"), url("data:;base64,AAEAAAALAIAAAwAwT1MvMg8SBYAAAAC8AAAAYGNtYXAXVtKIAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5ZiOoB34AAAF4AAABLGhlYWQKxyD1AAACpAAAADZoaGVhB7EDxwAAAtwAAAAkaG10eA4AAFEAAAMAAAAAGGxvY2EAvgCMAAADGAAAAA5tYXhwAAoAPwAAAygAAAAgbmFtZZlKCfsAAANIAAABhnBvc3QAAwAAAAAE0AAAACAAAwNVAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADpAQPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg6QH//f//AAAAAAAg6QD//f//AAH/4xcEAAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAADABEAcgPvAvwAIgAvADwAAAEmJAwBBw4BFBYXHgMzNzA2MzIWMRcyPgI3PgImJzEBIiY1NDYzMhYVFAYjISImNTQ2MzIWFRQGIwPvC/7O/pf+0AgICQkIAzpee0UqLjs/OSNEelw4AwcKAQgK/QU9VlY9PVZXPAISPVZWPT1WVj0C/AoJAQoICcPmwwgDBQMCcWuCWgIEBAMHwubECv5DVj09VlY9PVZWPT1WVj09VgAAAAABAED/wAL6A8AADQAABT4BLgEHFQkBFTYeAQIC+ismOKuo/oABgMnjRk9ATbaaZQT+AYABgPgFnOz+7QABAAAAAAAANPn7E18PPPUACwQAAAAAANPc7jwAAAAA09zuPAAA/8AD7wPAAAAACAACAAAAAAAAAAEAAAPA/8AAAAQAAAAAAAPvAAEAAAAAAAAAAAAAAAAAAAAGBAAAAAAAAAAAAAAAAgAAAAQAABEEAABAAAAAAAAKABQAHgB4AJYAAAABAAAABgA9AAMAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAADgCuAAEAAAAAAAEABwAAAAEAAAAAAAIABwBgAAEAAAAAAAMABwA2AAEAAAAAAAQABwB1AAEAAAAAAAUACwAVAAEAAAAAAAYABwBLAAEAAAAAAAoAGgCKAAMAAQQJAAEADgAHAAMAAQQJAAIADgBnAAMAAQQJAAMADgA9AAMAAQQJAAQADgB8AAMAAQQJAAUAFgAgAAMAAQQJAAYADgBSAAMAAQQJAAoANACkaWNvbW9vbgBpAGMAbwBtAG8AbwBuVmVyc2lvbiAxLjAAVgBlAHIAcwBpAG8AbgAgADEALgAwaWNvbW9vbgBpAGMAbwBtAG8AbwBuaWNvbW9vbgBpAGMAbwBtAG8AbwBuUmVndWxhcgBSAGUAZwB1AGwAYQByaWNvbW9vbgBpAGMAbwBtAG8AbwBuRm9udCBnZW5lcmF0ZWQgYnkgSWNvTW9vbi4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.vjs-full-window .video-js {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 1000000; }
+
+.video-js .vjs-control-bar {
+  z-index: 1; }
+  .video-js .vjs-control-bar .vjs-VR-control {
+    cursor: pointer; }
+    .video-js .vjs-control-bar .vjs-VR-control::before {
+      font-family: "VideoJS-Panorama";
+      content: "\e900";
+      font-size: 1.7em;
+      line-height: 1.67; }
+    .video-js .vjs-control-bar .vjs-VR-control.enable::before {
+      content: "\e901"; }
+
+.video-js.vjs-using-native-controls .vjs-poster,
+.video-js.vjs-using-native-controls .vjs-big-play-button {
+  display: block; }
+
+.video-js.vjs-panorama {
+  display: block; }
+  .video-js.vjs-panorama .vjs-video-canvas {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateZ(0);
+    -moz-transform: translateX(-50%) translateZ(0);
+    -o-transform: translateX(-50%) translateZ(0);
+    transform: translateX(-50%) translateZ(0);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    background: #000;
+    cursor: pointer; }
+  .video-js.vjs-panorama .vjs-video-notice-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 1.3em;
+    font-size: 1vw;
+    padding: 0.5em 1em;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+    -webkit-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -ms-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+    pointer-events: none; }
+    .video-js.vjs-panorama .vjs-video-notice-label.vjs-video-notice-fadeOut {
+      opacity: 0; }
+  .video-js.vjs-panorama #webgl-error-message {
+    position: relative;
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    color: black;
+    padding: 1.5em;
+    width: 400px;
+    margin: 5em auto 0px;
+    background: white;
+    -webkit-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -ms-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear; }
+    .video-js.vjs-panorama #webgl-error-message.vjs-video-notice-fadeOut {
+      opacity: 0; }
+  .video-js.vjs-panorama .vjs-loading-spinner {
+    z-index: 10; }
+  .video-js.vjs-panorama.vjs-panorama-mobile-inline-video.vjs-seeking .vjs-loading-spinner {
+    display: none; }
+  .video-js.vjs-panorama.vjs-panorama-mobile-inline-video.vjs-waiting .vjs-loading-spinner {
+    display: block !important; }
+  .video-js.vjs-panorama.vjs-panorama-mobile-inline-video-buffering .vjs-loading-spinner {
+    display: block !important; }
+  .video-js.vjs-panorama.vjs-panorama-mobile-inline-video-buffering .vjs-loading-spinner:before,
+  .video-js.vjs-panorama.vjs-panorama-mobile-inline-video-buffering .vjs-loading-spinner:after {
+    -webkit-animation: vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8) infinite, vjs-spinner-fade 1.1s linear infinite;
+    animation: vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8) infinite, vjs-spinner-fade 1.1s linear infinite; }
+  .video-js.vjs-panorama.vjs-panorama-mobile-inline-video-buffering .vjs-loading-spinner:before,
+  .video-js.vjs-panorama.vjs-panorama-mobile-inline-video-buffering .vjs-loading-spinner:before {
+    border-top-color: white; }
+  .video-js.vjs-panorama.vjs-panorama-mobile-inline-video-buffering .vjs-loading-spinner:after,
+  .video-js.vjs-panorama.vjs-panorama-mobile-inline-video-buffering .vjs-loading-spinner:after {
+    border-top-color: white;
+    -webkit-animation-delay: 0.44s;
+    animation-delay: 0.44s; }
+</style><style type="text/css">.image-360-container {
+  width: 100%;
+  height: 100%; }
+</style><style type="text/css">/*REVIEW*/
+.check-color {
+  color: #283c54 !important; }
+
+.checkbox-sm {
+  padding: 0px 5px 0px 0px !important; }
+
+.label-sm {
+  font-size: 12px !important; }
+  .label-sm .MuiFormControlLabel-label {
+    font-size: 12px !important; }
+
+.label-md {
+  font-size: 14px !important; }
+  .label-md .MuiFormControlLabel-label {
+    font-size: 14px !important; }
+
+.checkbox-secondary {
+  margin: 0px 0px 0px 30px !important; }
+  .checkbox-secondary .MuiSvgIcon-root {
+    width: 20px !important;
+    height: 20px !important; }
+
+.label-secondary {
+  font-size: 12px !important; }
+</style><style type="text/css">/*REVIEW*/
+.drag-drop-list-container {
+  padding: 15px;
+  margin: 0; }
+  .drag-drop-list-container li {
+    list-style-type: none; }
+
+.dragging {
+  background-color: white; }
+
+.dragged {
+  background-color: #f5f5f5; }
+</style><style type="text/css">/*REVIEW*/
+.table_component {
+  width: 100%;
+  height: calc(100% - 50px); }
+  .table_component .MuiTableContainer-root {
+    height: 100%; }
+  .table_component .MuiTableHead-root {
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0; }
+    .table_component .MuiTableHead-root .MuiTableCell-head {
+      padding-top: 0;
+      padding-bottom: 0; }
+  .table_component .MuiTableCell-stickyHeader {
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    z-index: 1; }
+  .table_component .MuiTableBody-root .MuiTableRow-root .MuiTableCell-root {
+    border-right: 1px solid #e0e0e0; }
+  .table_component .MuiTableBody-root .MuiTableRow-root .Mui-selected:hover {
+    background-color: #f3f3f3 !important; }
+  .table_component .MuiTableBody-root .MuiTableRow-root:hover {
+    box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15) !important;
+    background-color: #f3f3f3 !important; }
+
+.droppable-cell {
+  border: 1px solid #e0e0e0 !important;
+  background-color: #ffffff !important;
+  padding: 16px; }
+
+.menu-columns {
+  min-width: 150px; }
+  .menu-columns ul {
+    list-style-type: none;
+    padding: 0px !important;
+    margin: 0px !important; }
+    .menu-columns ul li {
+      padding: 10px;
+      cursor: pointer; }
+      .menu-columns ul li:hover {
+        background-color: #f5f5f5; }
+
+.no-more-items {
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  color: #8b8b8b; }
+
+.locked-columns {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  background: #F6F6F6 !important;
+  left: 0;
+  z-index: 2 !important; }
+
+.locked-header {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  background: #F6F6F6 !important;
+  left: 0;
+  z-index: 3 !important; }
+
+.options-menu {
+  padding: 10px 15px 0px; }
+  .options-menu-title {
+    font-weight: 500; }
+  .options-menu-icons {
+    padding-left: 6px !important; }
+  .options-menu-separator {
+    background-color: #c3c3c3;
+    border: 1px #c3c3c3 solid;
+    margin: 0; }
+
+.cell-container {
+  display: flex;
+  align-items: center;
+  width: 99%;
+  height: 45px; }
+
+.resizer {
+  bottom: 0;
+  cursor: col-resize;
+  height: 50px;
+  right: 0;
+  width: 5px;
+  position: absolute; }
+  .resizer:hover {
+    background-color: #d5cdcd; }
+</style><style type="text/css">/*REVIEW*/
+.cursor-pointer {
+  cursor: pointer; }
+
+.cursor-auto {
+  cursor: auto !important; }
+
+.mb-10 {
+  margin-bottom: 10px !important; }
+
+.mb-20 {
+  margin-bottom: 20px !important; }
+
+.MuiPaginationItem-textSecondary {
+  background-color: #f0f0f0 !important; }
+
+.MuiPaginationItem-textSecondary.Mui-selected {
+  background-color: #66bb6a !important; }
+
+.MuiPaginationItem-root {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important; }
+
+.footer-lite {
+  padding: 50px 5px 10px 5px !important;
+  border-bottom: 0px solid black !important; }
+
+.clickable {
+  cursor: pointer; }
+
+.clickable:hover {
+  text-decoration: underline;
+  color: #66bb6a; }
+
+.page-circle {
+  border-radius: 40px;
+  background-color: #ededed;
+  color: #767676;
+  font-size: 13px;
+  padding: 2px 9px;
+  margin: 5px 5px;
+  cursor: pointer;
+  white-space: nowrap; }
+
+.page-circle-active {
+  background-color: #66bb6a;
+  color: white; }
+
+.page-action {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 15px;
+  padding: 5px 5px 5px 5px; }
+
+.prev-disabled {
+  color: #ddd !important;
+  cursor: auto !important; }
+
+.pagination-controls {
+  justify-content: flex-start; }
+
+@media (max-width: 1280px) {
+  .pagination-controls {
+    justify-content: center !important;
+    margin-bottom: 20px !important; } }
+
+.pagination-container {
+  padding-top: 10px; }
+  .pagination-container .MuiGrid-justify-content-xs-flex-end {
+    justify-content: flex-end !important; }
+
+.btn-link {
+  text-decoration: underline;
+  color: #57595b;
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+  .btn-link:hover {
+    text-decoration: underline;
+    color: #000; }
+  .btn-link:focus {
+    outline: none; }
+
+.onlyLine {
+  margin: 0;
+  display: flex;
+  padding: 0;
+  flex-wrap: nowrap;
+  list-style: none;
+  align-items: center;
+  z-index: 10; }
+</style><style type="text/css">/*REVIEW*/
+.areamenu {
+  display: inline;
+  position: relative;
+  z-index: 4 !important; }
+  .areamenu .list {
+    min-width: 200px;
+    border-radius: 0.25rem !important; }
+    .areamenu .list ul {
+      list-style-type: none;
+      padding: 0px !important;
+      margin: 0px !important; }
+      .areamenu .list ul li {
+        padding: 5px 10px;
+        cursor: pointer; }
+        .areamenu .list ul li:hover {
+          background-color: #f5f5f5; }
+
+.areamenu-menu {
+  position: absolute;
+  margin-top: 5px;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  display: block !important;
+  transition: margin-top 0.3s, opacity 0.3s;
+  border-top: 1px solid #eee !important; }
+  .areamenu-menu .areamenu-scroll {
+    max-height: 300px; }
+  .areamenu-menu.show {
+    margin-top: 0;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    background-color: #fff; }
+
+.areamenu-header {
+  font-size: inherit;
+  padding: 10px 20px;
+  border-bottom: 1px solid #f0f0f0; }
+
+.areamenu-body {
+  padding: 10px 20px; }
+
+.areamenu-menu {
+  border-radius: 0.25rem;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  font-size: 14px;
+  border: none;
+  box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.15);
+  overflow: hidden; }
+  .areamenu-menu.right {
+    left: calc(100% + 10px);
+    top: 0;
+    position: absolute; }
+  .areamenu-menu .dropdown-item {
+    transition: all 0.2s; }
+    .areamenu-menu .dropdown-item:hover, .areamenu-menu .dropdown-item:focus, .areamenu-menu .dropdown-item:active {
+      background-color: #283c54;
+      text-decoration: none;
+      color: white; }
+
+.areamenu-item {
+  border-radius: 0.25rem; }
+</style><style type="text/css">/*REVIEW*/
+.input-normal {
+  font-size: 14px !important;
+  padding: 10px 10px;
+  border: 1px solid #c3c3c3;
+  border-radius: 3px; }
+  .input-normal:focus {
+    box-shadow: 0px 0px 2px 2px #03a9f4;
+    outline: 0 none;
+    border: 1px solid #8b8b8b; }
+
+.input-normal-icon {
+  padding: 10px 10px; }
+
+.input-normal-label {
+  padding-bottom: 5px;
+  font-weight: bold; }
+
+.input-loading {
+  width: 100%; }
+  .input-loading .MuiSkeleton-text {
+    transform: none !important;
+    height: 30px !important; }
+
+.input-icon-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch; }
+  .input-icon-container .input-icon-button {
+    font-size: 14px;
+    position: absolute;
+    right: 0; }
+    .input-icon-container .input-icon-button span {
+      font-size: 14px !important; }
+  .input-icon-container .input-icon-button-focused span {
+    color: #000000 !important; }
+  .input-icon-container button:hover span {
+    color: #000000 !important; }
+  .input-icon-container input {
+    align-self: stretch; }
+  .input-icon-container textarea {
+    align-self: stretch;
+    max-width: calc(100% - 24px);
+    min-width: calc(100% - 24px); }
+  .input-icon-container input[type="currency"]::-webkit-inner-spin-button,
+  .input-icon-container input[type="currency"]::-webkit-outer-spin-button,
+  .input-icon-container input[type="number"]::-webkit-inner-spin-button,
+  .input-icon-container input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+
+.input-editable {
+  font-size: 14px !important;
+  padding: 8px 10px;
+  width: calc(100% - 24px);
+  border: 1px solid #c3c3c3;
+  border-radius: 3px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  color: #8e8e8e; }
+
+.unitForm input::-webkit-input-placeholder {
+  font-size: 12px; }
+
+.unitForm ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 12px; }
+
+textarea {
+  resize: vertical; }
+
+.inline-textedit-container {
+  position: relative;
+  width: 100%; }
+  .inline-textedit-container .inline-text {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-right: 64px; }
+  .inline-textedit-container .inline-check-button {
+    position: absolute;
+    right: 25px;
+    top: 0px; }
+  .inline-textedit-container .inline-cancel-button {
+    position: absolute;
+    right: 0px;
+    top: 0px; }
+  .inline-textedit-container .inline-icon {
+    color: #DCDCDC;
+    cursor: pointer;
+    margin: 8px;
+    text-align: center; }
+  .inline-textedit-container .check-icon:hover {
+    color: #66bb6a; }
+  .inline-textedit-container .cancel-icon:hover {
+    color: #d0021b; }
+
+.inline-textedit-value {
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 3px;
+  padding-left: 10px;
+  font-weight: bold;
+  cursor: pointer; }
+  .inline-textedit-value:hover {
+    background-color: #f5f5f5; }
+</style><style type="text/css">/*REVIEW*/
+.select-label {
+  padding-bottom: 5px; }
+
+.select-error {
+  padding-top: 5px; }
+
+.react-select-container-error .react-select__control {
+  border: 1px solid red !important; }
+
+.react-select-container {
+  width: 100%; }
+  .react-select-container .react-select__control {
+    border-radius: 3px; }
+  .react-select-container .react-select__indicator-separator {
+    display: none; }
+  .react-select-container .react-select__dropdown-indicator {
+    padding: 0px 2px 0px 0px !important; }
+  .react-select-container .react-select__multi-value {
+    background-color: #43bf60;
+    border-radius: 13px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 3px 6px 3px 12px;
+    margin: 5px 5px 5px 0;
+    font-size: 13px; }
+  .react-select-container .react-select__multi-value__label {
+    color: #fff; }
+  .react-select-container .react-select__multi-value__remove {
+    cursor: pointer; }
+    .react-select-container .react-select__multi-value__remove:hover {
+      background-color: #43bf60;
+      color: #fff; }
+    .react-select-container .react-select__multi-value__remove svg {
+      width: 16px;
+      height: 16px; }
+
+.extra-option {
+  background-color: transparent;
+  color: inherit;
+  cursor: default;
+  display: block;
+  font-size: inherit;
+  padding: 8px 12px;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box; }
+
+.extra-option:hover {
+  background-color: #deebff; }
+
+.extra-option-container {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 2px 8px;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box; }
+
+.extra-option-container-placeholder {
+  color: gray;
+  margin-left: 2px;
+  margin-right: 2px; }
+</style><style type="text/css">.modal-root {
+  z-index: 4 !important;
+  position: fixed;
+  overflow: initial !important;
+  height: 0;
+  width: 0; }
+
+.modal-hide {
+  height: 0;
+  width: 0;
+  z-index: 0 !important; }
+
+.modal-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal-modal .MuiGrid-container {
+    width: auto; }
+
+.modal-content-root {
+  background-color: #fff;
+  overflow: auto;
+  max-height: 700px; }
+
+@media (max-width: 1366px) {
+  .modal-content-root {
+    max-height: 520px; }
+  .modal-large {
+    min-width: 700px !important;
+    max-width: 700px !important; }
+  .modal-header-large {
+    min-width: 700px !important;
+    max-width: 700px !important; } }
+
+@media (max-width: 1024px) {
+  .modal-content-root {
+    max-height: 400px; }
+  .modal-medium {
+    min-width: 600px !important;
+    max-width: 600px !important; }
+  .modal-large {
+    min-width: 600px !important;
+    max-width: 600px !important; }
+  .modal-header-medium {
+    min-width: 600px !important;
+    max-width: 600px !important; }
+  .modal-header-large {
+    min-width: 600px !important;
+    max-width: 600px !important; } }
+
+.modal-right > .modal-content-root {
+  max-height: 100% !important; }
+
+.modal-extra-small {
+  min-width: 400px;
+  max-width: 400px; }
+
+.modal-auto {
+  min-width: inherit;
+  max-width: inherit; }
+
+.modal-small {
+  min-width: 500px;
+  max-width: 500px; }
+
+.modal-medium {
+  min-width: 700px;
+  max-width: 700px; }
+
+.modal-large {
+  min-width: 1000px;
+  max-width: 1000px; }
+
+.modal-header {
+  border: solid 1px #e4e4e4;
+  padding: 8px 16px 8px 25px;
+  z-index: 1; }
+
+.modal-body {
+  min-height: 20px;
+  overflow-x: hidden; }
+
+.overflow-header {
+  overflow-x: hidden; }
+
+.modal-footer {
+  padding: 20px;
+  width: 100%;
+  z-index: 1; }
+
+.btn-close-modal.MuiIconButton-root {
+  padding: 5px !important; }
+
+.btn-close-modal .MuiIcon-root {
+  font-size: 20px !important;
+  font-weight: bold;
+  color: #000; }
+
+.modal-title {
+  font-weight: 700;
+  font-size: 15px; }
+
+.modal-right {
+  top: 50px !important;
+  left: initial !important;
+  bottom: initial !important;
+  height: 100% !important; }
+
+.all-height {
+  height: 100% !important; }
+
+.modal-header-fixed {
+  background-color: white;
+  top: 50px;
+  position: fixed; }
+
+.modal-header-right {
+  right: 0px !important; }
+
+.modal-header-extra-small {
+  min-width: 400px;
+  max-width: 400px; }
+
+.modal-header-auto {
+  min-width: inherit;
+  max-width: inherit; }
+
+.modal-header-small {
+  min-width: 500px;
+  max-width: 500px; }
+
+.modal-header-medium {
+  min-width: 700px;
+  max-width: 700px; }
+
+.modal-header-large {
+  min-width: 1000px;
+  max-width: 1000px; }
+
+.modal-footer-fixed {
+  background-color: white;
+  bottom: 0px;
+  position: fixed; }
+
+.modal-footer-right {
+  right: auto !important; }
+
+.modal-footer-extra-small {
+  min-width: 400px;
+  max-width: 400px; }
+
+.modal-footer-auto {
+  min-width: inherit;
+  max-width: inherit; }
+
+.modal-footer-small {
+  min-width: 500px;
+  max-width: 500px; }
+
+.modal-footer-medium {
+  min-width: 700px;
+  max-width: 700px; }
+
+.modal-footer-large {
+  min-width: 1000px;
+  max-width: 1000px; }
+
+.mb-100 {
+  margin-bottom: 100px; }
+
+.mt-50 {
+  margin-top: 50px; }
+
+.mt-100 {
+  margin-top: 100px; }
+
+.modal-top-0 {
+  top: 0px !important; }
+</style><style type="text/css" data-rbd-always="0"> [data-rbd-drag-handle-context-id="0"] { 
+          -webkit-touch-callout: none;
+          -webkit-tap-highlight-color: rgba(0,0,0,0);
+          touch-action: manipulation;
+         } [data-rbd-droppable-context-id="0"] { overflow-anchor: none; } </style><style type="text/css" data-rbd-dynamic="0"> [data-rbd-drag-handle-context-id="0"] { 
+      cursor: -webkit-grab;
+      cursor: grab;
+     }  </style><style type="text/css" data-rbd-always="1"> [data-rbd-drag-handle-context-id="1"] { 
+          -webkit-touch-callout: none;
+          -webkit-tap-highlight-color: rgba(0,0,0,0);
+          touch-action: manipulation;
+         } [data-rbd-droppable-context-id="1"] { overflow-anchor: none; } </style><style type="text/css" data-rbd-dynamic="1"> [data-rbd-drag-handle-context-id="1"] { 
+      cursor: -webkit-grab;
+      cursor: grab;
+     }  </style></head><body class=""><noscript>You need to enable JavaScript to run this app.</noscript><script>var theme="light.blue";"undefined"!=typeof Storage&&localStorage.getItem("themeColor")&&(theme=localStorage.getItem("themeColor")),-1!=theme.indexOf("dark")&&(document.documentElement.style.background="#1b191b")</script><div id="root"><div class="notification-container notification-container-empty"><span></span></div><div class="react-notification-root "><div class="notification-container-top-left"></div><div class="notification-container-top-right"></div><div class="notification-container-bottom-left"></div><div class="notification-container-bottom-right"></div><div class="notification-container-top-center"></div><div class="notification-container-center"><div class="center-inner"></div></div><div class="notification-container-bottom-center"></div></div><div class="menu-sub-hidden" id="app-container"><nav class="navbar fixed-top"><a class="menu-button d-none d-md-block" href="/app/accounts/list"><svg class="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17"><rect x="0.48" y="0.5" width="7" height="1"></rect><rect x="0.48" y="7.5" width="7" height="1"></rect><rect x="0.48" y="15.5" width="7" height="1"></rect></svg><svg class="sub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17"><rect x="1.56" y="0.5" width="16" height="1"></rect><rect x="1.56" y="7.5" width="16" height="1"></rect><rect x="1.56" y="15.5" width="16" height="1"></rect></svg></a><a class="menu-button-mobile d-xs-block d-sm-block d-md-none" href="/app/accounts/list"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 17"><rect x="0.5" y="0.5" width="25" height="1"></rect><rect x="0.5" y="7.5" width="25" height="1"></rect><rect x="0.5" y="15.5" width="25" height="1"></rect></svg></a><div class="d-inline-block"><div class="ml-2 dropdown"><button type="button" aria-haspopup="true" aria-expanded="false" class="language-button dropdown-toggle btn btn-light btn-sm"><span class="name">EN</span></button><div tabindex="-1" role="menu" aria-hidden="true" class="mt-2 dropdown-menu dropdown-menu-right"><button type="button" tabindex="0" class="dropdown-item">English</button><button type="button" tabindex="0" class="dropdown-item">Español</button></div></div></div><a class="navbar-logo" href="/"><span class="logo d-none d-xs-block"></span><span class="logo-mobile d-block d-xs-none"></span></a><div class="ml-auto"><div class="header-icons d-inline-block align-middle"><button class="header-icon btn btn-empty d-none d-sm-inline-block" type="button" id="fullScreenButton"><i class="simple-icon-size-fullscreen d-block"></i></button></div><div class="user d-inline-block mr-3"><div class="dropdown-menu-right dropdown"><button type="button" aria-haspopup="true" aria-expanded="false" class="p-0 btn btn-empty"><span class="name mr-1">qa team</span></button><div tabindex="-1" role="menu" aria-hidden="true" class="mt-2 dropdown-menu dropdown-menu-right"><button type="button" tabindex="0" class="dropdown-item">Change Password</button><button type="button" tabindex="0" class="dropdown-item">Clear cache</button><button type="button" tabindex="0" class="dropdown-item">temp token</button><button type="button" tabindex="0" class="dropdown-item">Sign Out</button></div></div></div></div></nav><div class="sidebar"><div class="main-menu"><div class="scroll"><div class="scrollbar-container ps"><ul class="list-unstyled nav flex-column"><li class="nav-item"><a class="menu-item-list_cus active" aria-current="page" href="/app/accounts"><span class="material-icons MuiIcon-root main-nav-menu" aria-hidden="true">perm_contact_calendar</span>Accounts</a></li><li class="nav-item"><a class="menu-item-list_cus" href="/app/devices/pool"><span class="material-icons MuiIcon-root main-nav-menu" aria-hidden="true">router</span>Devices</a></li><li class="nav-item"><a class="menu-item-list_cus" href="/app/vidfleet"><span class="material-icons MuiIcon-root main-nav-menu" aria-hidden="true">videocam</span>VidFleet</a></li><li class="nav-item"><a class="menu-item-list_cus" href="/app/reports"><span class="material-icons MuiIcon-root main-nav-menu" aria-hidden="true">assignment</span>Reports</a></li><li class="nav-item"><a class="menu-item-list_cus" href="/app/settings"><span class="material-icons MuiIcon-root main-nav-menu" aria-hidden="true">settings</span>Settings</a></li></ul><span style="position: absolute; bottom: 0px; width: 100%; text-align: center; font-size: 12px; color: rgb(128, 128, 128);">staging<br>1.0.258.1</span><div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div></div></div><div class="sub-menu"><div class="scroll"><div class="scrollbar-container ps"><ul data-parent="accounts" class="nav"><li class="nav-item"><a href="/app/accounts/list" class="active" aria-current="page"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">perm_contact_calendar</span>Accounts</a></li></ul><ul data-parent="accounts" class="nav"><li class="nav-item"><a href="/app/accounts/usersActivityLogs"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">group</span>Users Activity Logs</a></li></ul><ul data-parent="accounts" class="nav"><li class="nav-item"><a href="/app/subscriptions/list"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">time_to_leave</span>Subscriptions</a></li></ul><ul data-parent="accounts" class="nav"><li class="nav-item"><a href="/app/keyfobs/list"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">vpn_key</span>Key Fobs</a></li></ul><ul data-parent="accounts" class="nav"><li class="nav-item"><a href="/app/geofences/list"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">track_changes</span>Geofences</a></li></ul><ul data-parent="settings" class="nav"><li class="nav-item"><div><span class="cursor-pointer nav-elm-link"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">app_settings_alt</span><span class="fs-13 nav-elm-link">Devices</span><i class="ml-2 fs-10 simple-icon-arrow-down"></i></span><div class="collapse"><div class="pl-3 pt-2 nav-elm-link"><a href="/app/manufacturers/list"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">build</span><span class="fs-13 nav-elm-link">Manufacturers</span></a><a href="/app/devicesModel/list"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">developer_board</span><span class="fs-13 nav-elm-link">Device Models</span></a><a href="/app/deviceProfiles/list"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">assignment_ind</span><span class="fs-13 nav-elm-link">Device Profiles</span></a><a href="/app/accumulatorProfiles/list"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">settings_input_component</span><span class="fs-13 nav-elm-link">Accumulator Profiles</span></a></div></div></div></li></ul><ul data-parent="settings" class="nav"><li class="nav-item"><a href="/app/packages/list"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">work</span>Packages</a></li></ul><ul data-parent="settings" class="nav"><li class="nav-item"><a href="/app/pmUsers/list"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">perm_contact_calendar</span>Platform Manager Users</a></li></ul><ul data-parent="settings" class="nav"><li class="nav-item"><div><span class="cursor-pointer nav-elm-link"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">settings_system_daydream</span><span class="fs-13 nav-elm-link">Services &amp; Features</span><i class="ml-2 fs-10 simple-icon-arrow-down"></i></span><div class="collapse"><div class="pl-3 pt-2 nav-elm-link"><a href="/app/services/list"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">assignment_turned_in</span><span class="fs-13 nav-elm-link">Services</span></a><a href="/app/features/list"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">settings_applications</span><span class="fs-13 nav-elm-link">Features</span></a><a href="/app/deviceScripts/list"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">vpn_key</span><span class="fs-13 nav-elm-link">Script Management</span></a></div></div></div></li></ul><ul data-parent="settings" class="nav"><li class="nav-item"><a href="/app/cloudLoginPage/update"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">code</span>Cloud Login Page</a></li></ul><ul data-parent="reports" class="nav"><li class="nav-item"><a href="/app/reports/list"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">assignment</span>Reports</a></li></ul><ul data-parent="reports" class="nav"><li class="nav-item"><a href="/app/reports/schedules"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">event</span>Schedule Reports</a></li></ul><ul data-parent="vidfleet" class="nav"><li class="nav-item"><a href="/app/vidfleet/maintenancewarnings"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">warning</span>Maintenance Warnings</a></li></ul><ul data-parent="vidfleet" class="nav"><li class="nav-item"><a href="/app/vidfleet/cameralogs"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">camera_roll</span>Camera Logs</a></li></ul><ul data-parent="vidfleet" class="nav"><li class="nav-item"><a href="/app/vidfleet/dmsstatuses"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">perm_contact_calendar</span>DMS Statuses</a></li></ul><ul data-parent="vidfleet" class="nav"><li class="nav-item"><a href="/app/vidfleet/powerlost"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">settings_power</span>Power Lost</a></li></ul><ul data-parent="vidfleet" class="nav"><li class="nav-item"><a href="/app/vidfleet/sdcardstatus"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">sd_card</span>SD Card Status</a></li></ul><ul data-parent="vidfleet" class="nav"><li class="nav-item"><a href="/app/vidfleet/whiteListedDevices"><span class="material-icons MuiIcon-root main-nav-submenu" aria-hidden="true">list_alt</span>White Listed Devices</a></li></ul><div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div></div></div></div><main><div><div class="container-fluid"><div class="MuiGrid-root MuiGrid-container"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"><h1 class="m-0 p-0 my-auto">Accounts list (0)</h1></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"><div class="MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-flex-end"><button type="button" class="btn btn-primary btn-sm">Add Account</button></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div class="separator mb-md-2 mb-2" style="margin-top: 5px; width: 100%;"></div><div><div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-5"><div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto"><div class="btn-group btn-group-sm"><div class="btn btn-primary" style="margin: 0px;"><label for="actions" class="mb-0 d-inline-block">Actions</label></div><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle-split pl-2 pr-2 dropdown-toggle btn btn-primary" style="margin-left: -15px;"><span class="sr-only">Toggle Dropdown</span></button><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right"><button type="button" disabled="" tabindex="-1" class="disabled dropdown-item">Re-sync Backend Information</button></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto MuiGrid-grid-sm-auto" style="margin-right: 13px;"><div role="group" class="btn-group-grid btn-group-sm btn-group" style="display: flex; align-items: center;"><button type="button" class="btn btn-secondary" style="padding: 0px; height: 25px; margin: 0px; min-width: 40px;"><div style="padding: 0px; margin: 0px; display: inline-block;"><span class="material-icons MuiIcon-root toolbar-list-icon" aria-hidden="true">filter_list</span></div></button><button type="button" class="btn btn-primary" style="padding: 0px; height: 25px; margin-left: 0px; min-width: 40px;"><div style="padding: 0px; margin: 0px; display: inline-block;"><span class="material-icons MuiIcon-root toolbar-list-icon" aria-hidden="true">cached</span></div></button><div style="width: 55px; margin-left: -10px;"><div style="padding: 0px; margin: 0px; display: inline-block;"><div id="download" class="btn-group-grid btn-group btn-group-sm" style="font-size: 20px; padding: 0px; height: 25px; margin-top: -18px;"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary" style="height: 35px;"><span class="material-icons MuiIcon-root toolbar-list-icon" aria-hidden="true">cloud_download</span></button><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button" tabindex="0" class="dropdown-item">CSV</button></div></div></div></div><button type="button" class="btn btn-primary" style="padding: 0px; height: 25px; margin-left: 0px; width: 13px; margin-right: 0px; min-width: 40px;"><div style="padding: 0px; margin: 0px; display: inline-block;"><span class="material-icons MuiIcon-root toolbar-list-icon" aria-hidden="true">line_weights</span></div></button><div style="display: flex;"><div class="areamenu" tabindex="1"><span><button class="MuiButtonBase-root MuiIconButton-root icon-button MuiIconButton-sizeSmall" tabindex="0" type="icon" icon="view_week"><span class="MuiIconButton-label"><span class="material-icons MuiIcon-root MuiIcon-fontSizeSmall" aria-hidden="true">view_week</span></span><span class="MuiTouchRipple-root"></span></button></span><div class="areamenu-menu" style="width: 300px;"><div><div class="options-menu"><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8" style="display: flex; align-items: center;"><span class="options-menu-title">Column</span></div><div class="MuiGrid-root options-menu-icons MuiGrid-item MuiGrid-grid-xs-2"><span class="material-icons MuiIcon-root" aria-hidden="true">visibility</span></div><div class="MuiGrid-root options-menu-icons MuiGrid-item MuiGrid-grid-xs-2"><span class="material-icons MuiIcon-root" aria-hidden="true">lock</span></div></div><hr class="options-menu-separator"></div><div class=""><div data-rbd-droppable-id="droppable" data-rbd-droppable-context-id="0" class="drag-drop-list-container dragging"><div data-rbd-draggable-context-id="0" data-rbd-draggable-id="view" tabindex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0" data-rbd-drag-handle-draggable-id="view" data-rbd-drag-handle-context-id="0" draggable="false"></div><div data-rbd-draggable-context-id="0" data-rbd-draggable-id="Nametag" tabindex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0" data-rbd-drag-handle-draggable-id="Nametag" data-rbd-drag-handle-context-id="0" draggable="false"><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8" style="display: flex; align-items: center;"><span>Account</span></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"><label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary check-color undefined jss2 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false"><span class="MuiIconButton-label"><input class="jss4" id="Nametag" name="Nametag" type="checkbox" data-indeterminate="false" value="" checked=""><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"><span class="undefined"></span></span></label></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"><label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary check-color undefined jss2 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false"><span class="MuiIconButton-label"><input class="jss4" id="Nametag" name="Nametag" type="checkbox" data-indeterminate="false" value="" checked=""><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"><span class="undefined"></span></span></label></div></div></div><div data-rbd-draggable-context-id="0" data-rbd-draggable-id="Dealer_Nametag" tabindex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0" data-rbd-drag-handle-draggable-id="Dealer_Nametag" data-rbd-drag-handle-context-id="0" draggable="false"><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8" style="display: flex; align-items: center;"><span>Brand</span></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"><label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary check-color undefined jss2 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false"><span class="MuiIconButton-label"><input class="jss4" id="Dealer_Nametag" name="Dealer_Nametag" type="checkbox" data-indeterminate="false" value="" checked=""><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"><span class="undefined"></span></span></label></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"><label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary check-color undefined MuiIconButton-colorSecondary" aria-disabled="false"><span class="MuiIconButton-label"><input class="jss4" id="Dealer_Nametag" name="Dealer_Nametag" type="checkbox" data-indeterminate="false" value=""><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"><span class="undefined"></span></span></label></div></div></div><div data-rbd-draggable-context-id="0" data-rbd-draggable-id="Package_Nametag" tabindex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0" data-rbd-drag-handle-draggable-id="Package_Nametag" data-rbd-drag-handle-context-id="0" draggable="false"><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8" style="display: flex; align-items: center;"><span>Package</span></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"><label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary check-color undefined jss2 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false"><span class="MuiIconButton-label"><input class="jss4" id="Package_Nametag" name="Package_Nametag" type="checkbox" data-indeterminate="false" value="" checked=""><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"><span class="undefined"></span></span></label></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"><label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary check-color undefined MuiIconButton-colorSecondary" aria-disabled="false"><span class="MuiIconButton-label"><input class="jss4" id="Package_Nametag" name="Package_Nametag" type="checkbox" data-indeterminate="false" value=""><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"><span class="undefined"></span></span></label></div></div></div><div data-rbd-draggable-context-id="0" data-rbd-draggable-id="Platform" tabindex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0" data-rbd-drag-handle-draggable-id="Platform" data-rbd-drag-handle-context-id="0" draggable="false"><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8" style="display: flex; align-items: center;"><span>Platform</span></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"><label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary check-color undefined jss2 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false"><span class="MuiIconButton-label"><input class="jss4" id="Platform" name="Platform" type="checkbox" data-indeterminate="false" value="" checked=""><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"><span class="undefined"></span></span></label></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"><label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary check-color undefined MuiIconButton-colorSecondary" aria-disabled="false"><span class="MuiIconButton-label"><input class="jss4" id="Platform" name="Platform" type="checkbox" data-indeterminate="false" value=""><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"><span class="undefined"></span></span></label></div></div></div><div data-rbd-draggable-context-id="0" data-rbd-draggable-id="SubscriptionsCount" tabindex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0" data-rbd-drag-handle-draggable-id="SubscriptionsCount" data-rbd-drag-handle-context-id="0" draggable="false"><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8" style="display: flex; align-items: center;"><span>Subscriptions</span></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"><label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary check-color undefined jss2 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false"><span class="MuiIconButton-label"><input class="jss4" id="SubscriptionsCount" name="SubscriptionsCount" type="checkbox" data-indeterminate="false" value="" checked=""><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"><span class="undefined"></span></span></label></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"><label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary check-color undefined MuiIconButton-colorSecondary" aria-disabled="false"><span class="MuiIconButton-label"><input class="jss4" id="SubscriptionsCount" name="SubscriptionsCount" type="checkbox" data-indeterminate="false" value=""><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"><span class="undefined"></span></span></label></div></div></div><div data-rbd-draggable-context-id="0" data-rbd-draggable-id="CRM" tabindex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0" data-rbd-drag-handle-draggable-id="CRM" data-rbd-drag-handle-context-id="0" draggable="false"><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8" style="display: flex; align-items: center;"><span>CRM</span></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"><label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary check-color undefined jss2 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false"><span class="MuiIconButton-label"><input class="jss4" id="CRM" name="CRM" type="checkbox" data-indeterminate="false" value="" checked=""><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"><span class="undefined"></span></span></label></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"><label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary check-color undefined MuiIconButton-colorSecondary" aria-disabled="false"><span class="MuiIconButton-label"><input class="jss4" id="CRM" name="CRM" type="checkbox" data-indeterminate="false" value=""><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"><span class="undefined"></span></span></label></div></div></div><div data-rbd-draggable-context-id="0" data-rbd-draggable-id="Status" tabindex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0" data-rbd-drag-handle-draggable-id="Status" data-rbd-drag-handle-context-id="0" draggable="false"><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8" style="display: flex; align-items: center;"><span>Status</span></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"><label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary check-color undefined jss2 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false"><span class="MuiIconButton-label"><input class="jss4" id="Status" name="Status" type="checkbox" data-indeterminate="false" value="" checked=""><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"><span class="undefined"></span></span></label></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"><label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary check-color undefined MuiIconButton-colorSecondary" aria-disabled="false"><span class="MuiIconButton-label"><input class="jss4" id="Status" name="Status" type="checkbox" data-indeterminate="false" value=""><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"><span class="undefined"></span></span></label></div></div></div></div></div></div></div></div></div></div></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-7"><div class="MuiGrid-root options-data-view MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-flex-end"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div style="display: flex; align-items: center;"><div style="width: 100%;"><div class="react-tagsinput"><div><div class="search-md"><div class="inline-box"></div><div class="inline-box"><div class="search-md" style="width: 200px;"><input type="text" class="react-tagsinput-input" placeholder="Search" maxlength="30" value="" style="border-style: none;"></div></div><div class="inline-box"><div class="search-md-icon" style="margin-left: 24px;"><span class="material-icons MuiIcon-root" aria-hidden="true">search</span></div></div></div></div></div></div></div></div></div></div></div><div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12" style="margin-top: 8px;"><div class="container-dataview" style="height: calc(100vh - 200px);"><div style="height: 100%; width: 100%;"><div class="MuiGrid-root table_component MuiGrid-item"><div class="MuiTableContainer-root"><table class="MuiTable-root MuiTable-stickyHeader" aria-labelledby="tableTitle" aria-label="enhanced table"><thead class="MuiTableHead-root"><tr class="MuiTableRow-root drag-drop-list-container dragging MuiTableRow-head" data-rbd-droppable-id="droppable" data-rbd-droppable-context-id="1"><th class="MuiTableCell-root MuiTableCell-head locked-header MuiTableCell-paddingCheckbox MuiTableCell-stickyHeader" scope="col"><span class="MuiButtonBase-root MuiIconButton-root jss1 MuiCheckbox-root MuiCheckbox-colorSecondary jss2 Mui-checked MuiIconButton-colorSecondary" aria-disabled="false" style="color: black;"><span class="MuiIconButton-label"><input class="jss4" type="checkbox" data-indeterminate="false" aria-label="select all desserts" value="" checked=""><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg></span><span class="MuiTouchRipple-root"></span></span></th><th class="MuiTableCell-root MuiTableCell-head locked-header MuiTableCell-stickyHeader" scope="col" id="header-view" style="width: 40px; min-width: 40px; height: 44px; left: 43px;"><div data-rbd-draggable-context-id="1" data-rbd-draggable-id="view" tabindex="0" role="button" aria-describedby="rbd-hidden-text-1-hidden-text-10" data-rbd-drag-handle-draggable-id="view" data-rbd-drag-handle-context-id="1" draggable="false" class="cell-container"><div></div></div></th><th class="MuiTableCell-root MuiTableCell-head locked-header MuiTableCell-stickyHeader" scope="col" id="header-Nametag" style="width: 400px; min-width: 400px; height: 44px; left: 83px;"><div data-rbd-draggable-context-id="1" data-rbd-draggable-id="Nametag" tabindex="0" role="button" aria-describedby="rbd-hidden-text-1-hidden-text-10" data-rbd-drag-handle-draggable-id="Nametag" data-rbd-drag-handle-context-id="1" draggable="false" class="cell-container"><span class="MuiButtonBase-root MuiTableSortLabel-root" tabindex="0" role="button" aria-disabled="false"><div>Account</div><svg class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"></path></svg></span></div><div id="resize-Nametag" class="resizer"></div></th><th class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader" scope="col" id="header-Dealer_Nametag" style="width: 350px; min-width: 350px; height: 44px;"><div data-rbd-draggable-context-id="1" data-rbd-draggable-id="Dealer_Nametag" tabindex="0" role="button" aria-describedby="rbd-hidden-text-1-hidden-text-10" data-rbd-drag-handle-draggable-id="Dealer_Nametag" data-rbd-drag-handle-context-id="1" draggable="false" class="cell-container"><span class="MuiButtonBase-root MuiTableSortLabel-root" tabindex="0" role="button" aria-disabled="false"><div>Brand</div><svg class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"></path></svg></span></div><div id="resize-Dealer_Nametag" class="resizer"></div></th><th class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader" scope="col" id="header-Package_Nametag" style="width: 350px; min-width: 350px; height: 44px;"><div data-rbd-draggable-context-id="1" data-rbd-draggable-id="Package_Nametag" tabindex="0" role="button" aria-describedby="rbd-hidden-text-1-hidden-text-10" data-rbd-drag-handle-draggable-id="Package_Nametag" data-rbd-drag-handle-context-id="1" draggable="false" class="cell-container"><span class="MuiButtonBase-root MuiTableSortLabel-root" tabindex="0" role="button" aria-disabled="false"><div>Package</div><svg class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"></path></svg></span></div><div id="resize-Package_Nametag" class="resizer"></div></th><th class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader" scope="col" id="header-Platform" style="width: 150px; min-width: 150px; height: 44px;"><div data-rbd-draggable-context-id="1" data-rbd-draggable-id="Platform" tabindex="0" role="button" aria-describedby="rbd-hidden-text-1-hidden-text-10" data-rbd-drag-handle-draggable-id="Platform" data-rbd-drag-handle-context-id="1" draggable="false" class="cell-container"><span class="MuiButtonBase-root MuiTableSortLabel-root" tabindex="0" role="button" aria-disabled="false"><div>Platform</div><svg class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"></path></svg></span></div><div id="resize-Platform" class="resizer"></div></th><th class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader" scope="col" id="header-SubscriptionsCount" style="width: 200px; min-width: 200px; height: 44px;"><div data-rbd-draggable-context-id="1" data-rbd-draggable-id="SubscriptionsCount" tabindex="0" role="button" aria-describedby="rbd-hidden-text-1-hidden-text-10" data-rbd-drag-handle-draggable-id="SubscriptionsCount" data-rbd-drag-handle-context-id="1" draggable="false" class="cell-container"><div>Subscriptions</div></div><div id="resize-SubscriptionsCount" class="resizer"></div></th><th class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader" scope="col" id="header-CRM" style="width: 220px; min-width: 220px; height: 44px;"><div data-rbd-draggable-context-id="1" data-rbd-draggable-id="CRM" tabindex="0" role="button" aria-describedby="rbd-hidden-text-1-hidden-text-10" data-rbd-drag-handle-draggable-id="CRM" data-rbd-drag-handle-context-id="1" draggable="false" class="cell-container"><span class="MuiButtonBase-root MuiTableSortLabel-root" tabindex="0" role="button" aria-disabled="false"><div>CRM</div><svg class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"></path></svg></span></div><div id="resize-CRM" class="resizer"></div></th><th class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader" scope="col" id="header-Status" style="width: 180px; min-width: 180px; height: 44px;"><div data-rbd-draggable-context-id="1" data-rbd-draggable-id="Status" tabindex="0" role="button" aria-describedby="rbd-hidden-text-1-hidden-text-10" data-rbd-drag-handle-draggable-id="Status" data-rbd-drag-handle-context-id="1" draggable="false" class="cell-container"><span class="MuiButtonBase-root MuiTableSortLabel-root" tabindex="0" role="button" aria-disabled="false"><div>Status</div><svg class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"></path></svg></span></div><div id="resize-Status" class="resizer"></div></th></tr></thead><tbody class="MuiTableBody-root"></tbody></table></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"><div style="padding: 5px 0px 0px;"><div class="pagination-container"><div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start MuiGrid-justify-content-xs-space-between"><div class="MuiGrid-root pagination-controls MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-flex-start MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-4"><nav aria-label="pagination navigation" class="MuiPagination-root" style="display: none;"><ul class="MuiPagination-ul"><li><button class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page MuiPaginationItem-textSecondary Mui-disabled Mui-disabled" tabindex="-1" type="button" disabled="" aria-label="Go to previous page"><svg class="MuiSvgIcon-root MuiPaginationItem-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg></button></li><li><button class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-page MuiPaginationItem-textSecondary" tabindex="0" type="button" aria-label="Go to next page"><svg class="MuiSvgIcon-root MuiPaginationItem-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg><span class="MuiTouchRipple-root"></span></button></li></ul></nav><ul class="MuiPagination-ul"><li><button type="button" class="btn-link" disabled="">prev</button></li><li><button type="button" class="btn-link">next</button></li></ul></div><div class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-flex-start MuiGrid-justify-content-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-4" style="margin-bottom: 20px;"><div><span class="page-circle cursor-auto">Total: </span></div></div><div class="MuiGrid-root pagination-controls MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-flex-start MuiGrid-justify-content-xs-flex-end MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-4"><span class="page-circle ">20</span><span class="page-circle ">30</span><span class="page-circle ">50</span><span class="page-circle ">100</span><span class="page-circle cursor-auto">per page</span></div></div></div></div></div></div></div></div></div></div></div></div><div class="app-menu "><div class="scrollbar-container ps"><div class="p-4"><div class="MuiGrid-root MuiGrid-container"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"><h3>Advance filters</h3></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"><div style="display: flex; justify-content: end;"><span class="btn-action cursor-pointer"><span class="material-icons MuiIcon-root" aria-hidden="true">delete</span></span></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div style="margin-bottom: 5px;"><button type="button" class="btn btn-primary btn-sm" style="width: 100%;">Apply</button></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><p class="text-muted text-small">Platforms</p><div class="mb-2"><p class="d-sm-inline-block mb-1"><a href="/app/accounts/list"><span class="mb-1 mr-1 badge badge-dark badge-pill">All</span></a></p></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><label>Active Accounts Only</label><input class="react-switch-checkbox" id="filterAccountList" type="checkbox"><label class="react-switch-label" for="filterAccountList" style="width: 80px; height: 30px;"><span class="react-switch-button"></span><span class="react-switch-text">No</span></label></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div><p class="text-muted text-small">Tags</p><div class="react-tags"><div class="react-tags__selected" aria-relevant="additions removals" aria-live="polite"></div><div class="react-tags__search"><div class="react-tags__search-wrapper"><input placeholder="Add new tag" class="react-tags__search-input" role="combobox" aria-autocomplete="list" aria-label="Add new tag" aria-owns="ReactTags" aria-expanded="false" value="" style="width: 91px;"><div style="position: absolute; width: 0px; height: 0px; visibility: hidden; overflow: scroll; white-space: pre; font-size: 16px; font-family: Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-weight: 400; font-style: normal; letter-spacing: normal; text-transform: none;">Add new tag</div></div></div></div></div></div></div></div><div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div><a class="app-menu-button nav-link"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"></path></svg></a></div></div></div></main></div></div><iframe id="intercom-frame" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;" aria-hidden="true" tabindex="-1" title="Intercom"></iframe><div id="rbd-announcement-0" aria-live="assertive" aria-atomic="true" style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(100%);"></div><div id="rbd-hidden-text-0-hidden-text-0" style="display: none;">
+  Press space bar to start a drag.
+  When dragging you can use the arrow keys to move the item around and escape to cancel.
+  Some screen readers may require you to be in focus mode or to use your pass through key
+</div><div id="rbd-announcement-1" aria-live="assertive" aria-atomic="true" style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(100%);"></div><div id="rbd-hidden-text-1-hidden-text-10" style="display: none;">
+  Press space bar to start a drag.
+  When dragging you can use the arrow keys to move the item around and escape to cancel.
+  Some screen readers may require you to be in focus mode or to use your pass through key
+</div></body></html>
